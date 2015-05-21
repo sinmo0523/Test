@@ -37,27 +37,11 @@ import java.util.List;
 
 
 public class PTStoryFragment extends Fragment {
-   //String urlProject = "https://www.pivotaltracker.com/services/v5/projects/" + PivotalTrackerFragment.choosenProjectId + "/stories?token=" + PivotalTrackerFragment.token;
-    String urlProject = "https://www.pivotaltracker.com/services/v5/projects/1313008/stories?token=64ae3fa63bd077840e44e878dc1c905f";
-
-    String error1;
-    ListView currentList;
-    ListView backlogList;
-    ListView iceboxList;
-    ArrayAdapter<String> currentAdapter;
-    ArrayAdapter<String> backlogAdapter;
-    ArrayAdapter<String> iceboxAdapter;
-    ArrayList<String> currentItems = new ArrayList<String>();
-
-
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         View view = inflater.inflate(R.layout.fragment_pivotal_tab, container, false);
-
-       // backlogList = (ListView) view.findViewById(R.id.ptBacklogList);
-       // iceboxList = (ListView) view.findViewById(R.id.ptIceboxList);
 
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.pivotal_viewpager);
         viewPager.setAdapter(new PivotalFragmentPagerAdapter(getFragmentManager()));
@@ -65,6 +49,4 @@ public class PTStoryFragment extends Fragment {
         tabsStrip.setViewPager(viewPager);
         return view;
     }
-
-
 }
