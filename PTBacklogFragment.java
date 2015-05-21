@@ -34,8 +34,7 @@ public class PTBacklogFragment extends Fragment {
     }
 
     void displayList(){
-        int i;
-        for(i = 0; i < PivotalTrackerFragment.storylist.size(); i++)
+        for(int i = 0; i < PivotalTrackerFragment.storylist.size(); i++)
         {
             if ( PivotalTrackerFragment.storylist.get(i).getCurrentState().equals("started") )
                 backlogItems.add(PivotalTrackerFragment.storylist.get(i).getName());
