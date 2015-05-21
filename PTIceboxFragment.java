@@ -29,6 +29,7 @@ public class PTIceboxFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_pivotal_icebox, container, false);
+
         iceboxList = (ListView) view.findViewById(R.id.ptIceboxList);
         iceboxAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, iceboxItems);
         displayList();

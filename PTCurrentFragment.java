@@ -25,6 +25,7 @@ public class PTCurrentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_pivotal_current, container, false);
+
         currentList = (ListView) view.findViewById(R.id.ptCorrentList);
         currentAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, currentItems);
         displayList();

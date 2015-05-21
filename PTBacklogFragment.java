@@ -25,11 +25,11 @@ public class PTBacklogFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_pivotal_backlog, container, false);
+
         backlogList = (ListView) view.findViewById(R.id.ptBacklogList);
         backlogAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, backlogItems);
         displayList();
         backlogList.setAdapter(backlogAdapter);
-
         return view;
     }
 
